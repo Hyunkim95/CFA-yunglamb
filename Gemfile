@@ -8,7 +8,8 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
-gem 'bootstrap-sass', '~> 3.3.6'
+gem "bulma-rails", "~> 0.4.0"
+gem 'friendly_id', '~> 5.1.0'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-github'

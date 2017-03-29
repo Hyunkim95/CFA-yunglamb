@@ -1,3 +1,46 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.nav-item a.is-tab:hover, a.nav-item.is-tab:hover {
+    border-bottom-color: #00d1b2;
+    border-top-color: transparent;
+}
+
+h1{
+  font-size: 10em;
+}
+
+.nav-item a:hover, a.nav-item:hover {
+    color: black !important;
+}
+
+a:hover {
+    background-color: transparent !important;
+}
+
+.nav {
+  margin-bottom: 4em;
+}
+
+.center{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card{
+  margin-right: 2em;
+  margin-bottom: 2em;
+  width: 60em;
+}
+
+
+.box{
+  width: 60em;
+}
+
+.wrapper .card,.box{
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,29 +1,44 @@
-<p id="notice"><%= notice %></p>
+<div class="wrapper">
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<div class="card">
+  <div class="card-content">
+    <p class="title">
+      <%= @post.content %>
+    </p>
+    <p class="subtitle">
+      <%= @post.user.email %>
+    </p>
+    <%= social_share_button_tag(@post.title) %>
+  </div>
+  <footer class="card-footer">
+    <p class="card-footer-item">
+      <span>
+        <%= link_to 'Edit', edit_post_path(@post) %>
+      </span>
+    </p>
+    <p class="card-footer-item">
+      <span>
+        <%= link_to 'Back', posts_path %>
+      </span>
+    </p>
+  </footer>
+</div>
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
+<div class="box">
+  <% @comments.each do |comment| %>
+  <article class="media">
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <small><%= comment.user.email %></small>
+          <br>
+          <%= comment.content %>
+        </p>
+      </div>
+    </div>
+  </article>
+  <% end %>
+  <%= render 'comments/form', comment: @comment%>
+</div>
 
-<p>
-  <strong>User:</strong>
-  <%= @post.user.email %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
-
-<%= social_share_button_tag(@post.title) %>
-
-<% @comments.each do |comment| %>
-<br>
-<%= comment.user.email %>
-<%= comment.content %>
-<% end %>
-
-<%= render 'comments/form', comment: @comment%>
+</div>

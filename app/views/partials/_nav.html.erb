@@ -1,12 +1,9 @@
-
+<!--
 <nav class="navbar navbar-default">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <a class="navbar-brand" id="white"href="#">Yung Lamb</a>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li id="white">
@@ -19,6 +16,34 @@
         <li id="white"><%= link_to 'Register', new_user_registration_path, :id => "white" %></li>
         <% end %>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+  </div>
+
+</nav> -->
+
+<nav class="nav has-shadow">
+  <div class="container">
+    <div class="nav-left">
+      <%= link_to root_path, :class => "nav-item" do %>
+          <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/122811-200.png" alt="Bulma logo">
+      <% end %>
+
+      <%=link_to 'Posts', posts_path, :class => "nav-item is-tab is-hidden-mobile"%>
+      <%=link_to 'New Posts', new_post_path, :class => "nav-item is-tab is-hidden-mobile"%>
+    </div>
+    <span class="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div class="nav-right nav-menu">
+
+      <% if user_signed_in? %>
+      <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "nav-item is-tab" %>
+      <% else %>
+      <%= link_to 'Sign In', new_user_session_path, :class => "nav-item is-tab"%>
+      <%= link_to 'Register', new_user_registration_path, :class => "nav-item is-tab" %>
+      <% end %>
+    </div>
+  </div>
 </nav>
