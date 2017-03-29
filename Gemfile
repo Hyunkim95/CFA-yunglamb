@@ -10,6 +10,7 @@ end
 gem 'rails', '~> 5.0.2'
 gem "bulma-rails", "~> 0.4.0"
 gem 'friendly_id', '~> 5.1.0'
+gem 'simple_form'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-github'

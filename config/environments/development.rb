@@ -6,6 +6,23 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
+config.action_mailer.default_url_options = { host: 'localhost:3000' }
+ config.action_mailer.delivery_method = :smtp
+
+
+ config.action_mailer.perform_deliveries = true
+ config.action_mailer.raise_delivery_errors = true
+ config.action_mailer.default :charset => "utf-8"
+
+ config.action_mailer.smtp_settings = {
+  :port           => 587,
+  :address        => 'smtp.mailgun.org',
+  :user_name      => ENV['MAILGUN_DEFAULT_SMTP'],
+  :password       => ENV['MAILGUN_PASSWORD'],
+  :domain         => ENV["MAILGUN_DOMAIN_URL"],
+  :authentication => :plain
+ }
+
   # Do not eager load code on boot.
   config.eager_load = false
 
