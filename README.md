@@ -1,24 +1,3 @@
-# README
+# Lambnation
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Lambnation was one of our first projects using rails - it is a simple rails based web application which allows users to post content. Users or 'Young Lambs' also have the ability to post comments directly to the posts.
